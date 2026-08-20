@@ -1,0 +1,18 @@
+# Секреты и host-specific конфиги
+.env
+ansible/inventory/hosts.yml
+k8s/telegram-bot/secret.yaml
+k8s/monitoring/values.secret.yaml
+kubeconfig*
+*.kubeconfig
+
+# Ansible
+*.retry
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
