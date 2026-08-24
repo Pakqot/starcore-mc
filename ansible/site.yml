@@ -1,0 +1,6 @@
+---
+- name: Provision starcore
+  hosts: starcore
+  become: true
+  roles:
+    - ssh_hardening
