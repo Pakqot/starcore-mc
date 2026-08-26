@@ -1,2 +1,6 @@
 ---
 admin_user: nlandar
+
+firewall_allowed_tcp_ports:
+  - 22      # SSH
+  - 25565   # Minecraft
