@@ -13,8 +13,8 @@ single, professionally operated Minecraft server. Infrastructure as Code
 
 - [x] Base OS: Debian 13 (trixie), LVM-partitioned disk
 - [x] SSH: key-only authentication, password login disabled, root login disabled
-- [ ] WireGuard remote access
-- [ ] Firewall (nftables)
+- [x] Firewall (nftables), parameterized via Ansible variables
+- [ ] WireGuard remote access _(deferred — currently using direct key-based SSH)_
 - [ ] Storage layout (zram swap, service data isolation)
 - [ ] Docker
 - [ ] k3s (single-node Kubernetes)
@@ -33,6 +33,15 @@ _TODO — added once the core services are in place_
 _TODO_
 
 ## Repository structure
+
+ansible/
+├── ansible.cfg
+├── inventory/
+├── group_vars/
+├── site.yml
+└── roles/
+├── ssh_hardening/
+└── firewall/
 
 Will grow into `k8s/`, `telegram-bot/`, `docs/` as later stages land.
 
