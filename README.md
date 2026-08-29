@@ -1,7 +1,7 @@
-# starcore
+# SUNCORE Vanilla Minecraft K3S Server Build
 
-**STARCORE** is a public reference implementation of the hosting architecture
-used at **Suncore** — a game server hosting company — scaled down to a
+**SUNCORE K3S** is a public reference implementation of the hosting architecture
+used at **SUNCORE** — a game server hosting company — scaled down to a
 single, professionally operated Minecraft server. Infrastructure as Code
 (Ansible + Kubernetes), remotely manageable end-to-end via a Telegram bot.
 
