@@ -4,3 +4,13 @@ admin_user: nlandar
 firewall_allowed_tcp_ports:
   - 22      # SSH
   - 25565   # Minecraft
+
+lvm_vg: starcore-vg
+lvm_swap_lv: swap_1
+lvm_var_lv: var
+var_lv_extend_gb: 10
+zram_percent: 25
+
+svc_data_root: /home/svc-data
+docker_data_root: "{{ svc_data_root }}/docker"
+k3s_data_dir: "{{ svc_data_root }}/k3s"

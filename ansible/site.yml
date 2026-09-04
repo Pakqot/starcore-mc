@@ -5,3 +5,4 @@
   roles:
     - ssh_hardening
     - firewall
+    - storage
