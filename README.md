@@ -15,8 +15,8 @@ single, professionally operated Minecraft server. Infrastructure as Code
 - [x] SSH: key-only authentication, password login disabled, root login disabled
 - [x] Firewall (nftables), parameterized via Ansible variables
 - [ ] WireGuard remote access _(deferred — currently using direct key-based SSH)_
-- [ ] Storage layout (zram swap, service data isolation)
-- [ ] Docker
+- [x] Storage layout (zram swap, service data isolation)
+- [x] Docker
 - [ ] k3s (single-node Kubernetes)
 - [ ] Power management (24/7 operation)
 - [ ] Monitoring (Prometheus/Grafana/Alertmanager → Telegram)
@@ -40,8 +40,10 @@ ansible/
 ├── group_vars/
 ├── site.yml
 └── roles/
-├── ssh_hardening/
-└── firewall/
+    ├── ssh_hardening/
+    ├── firewall/
+    ├── storage/
+    └── docker/
 
 Will grow into `k8s/`, `telegram-bot/`, `docs/` as later stages land.
 
