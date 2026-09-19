@@ -1,6 +1,15 @@
 #!/usr/sbin/nft -f
+# Managed by Ansible (roles/firewall). Do not edit by hand.
+#
+# No global `flush ruleset` here: k3s/flannel and Docker manage their own
+# NAT tables via iptables-nft. A global flush wipes them on every apply and
+# causes pod networking conflicts (see docs/runbook.md). Flush is scoped to
+# our own table only.
 
-flush ruleset
+table inet filter {
+}
+
+flush table inet filter
 
 table inet filter {
   chain input {
@@ -16,7 +25,7 @@ table inet filter {
   }
 
   chain forward {
-    type filter hook forward priority 0; policy drop;
+    type filter hook forward priority 0; policy accept;
   }
 
   chain output {
